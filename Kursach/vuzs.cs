@@ -21,7 +21,7 @@ namespace Kursach
             
         private void FieldsForm_Fill()
         {
-            textBox1.Text = menu.ds.Tables["vuz"].Rows[n]["code_vuza"].ToString();
+            textBox1.Text = menu.ds.Tables["vuz"].Rows[n]["vuz_code"].ToString();
             textBox2.Text = menu.ds.Tables["vuz"].Rows[n]["specialty"].ToString();
             textBox1.Enabled = false;
         }
@@ -47,7 +47,74 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (menu.ds.Tables["vuz"].Rows.Count > 0)
+            {
+                n = 0;
+                FieldsForm_Fill();
+            }
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (n > 0)
+            {
+                n--;
+                FieldsForm_Fill();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (n + 1 < menu.ds.Tables["vuz"].Rows.Count)
+            {
+                n++;
+                FieldsForm_Fill();
+            }
+            else { n++; FieldsForm_Clear(); }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            n = menu.ds.Tables["vuz"].Rows.Count;
+            FieldsForm_Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (n == menu.ds.Tables["vuz"].Rows.Count)
+            {
+                sql = "INSERT INTO vuz values(" + textBox1.Text + ", '" + textBox2.Text + "')";
+                menu.Modification_Execute(sql);
+                textBox1.Enabled = false;
+                menu.ds.Tables["vuz"].Rows.Add(new object[] { textBox1.Text, textBox2.Text });
+            }
+            else
+            {
+                sql = "UPDATE vuz SET specialty='" + textBox2.Text + "' WHERE vuz_code=" + textBox1.Text;
+                menu.Modification_Execute(sql);
+                menu.ds.Tables["vuz"].Rows[n].ItemArray = new object[] { textBox1.Text, textBox2.Text };
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string mes = "Вы точно хотите удалить из картотеки ВУЗ с кодом " + textBox1.Text + "?";
+            string cap = "Удаление ВУЗа";
+            MessageBoxButtons but = MessageBoxButtons.YesNo;
+            DialogResult rezult = MessageBox.Show(mes, cap, but);
+            if (rezult == DialogResult.No) { return; }
+            string sql = "DELETE FROM vuz WHERE vuz_code=" + textBox1.Text;
+            menu.Modification_Execute(sql);
+            menu.ds.Tables["vuz"].Rows.RemoveAt(n);
+            if (menu.ds.Tables["vuz"].Rows.Count > n)
+            {
+                FieldsForm_Fill();
+            }
+            else
+            {
+                FieldsForm_Clear();
+            }
         }
     }
 }

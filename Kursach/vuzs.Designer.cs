@@ -80,6 +80,7 @@
             this.button6.TabIndex = 67;
             this.button6.Text = "Удалить данные";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -89,6 +90,7 @@
             this.button5.TabIndex = 66;
             this.button5.Text = "Сохранить данные";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -98,6 +100,7 @@
             this.button4.TabIndex = 65;
             this.button4.Text = "В конец";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -107,6 +110,7 @@
             this.button3.TabIndex = 64;
             this.button3.Text = "Вперёд";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -116,6 +120,7 @@
             this.button2.TabIndex = 63;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

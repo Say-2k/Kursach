@@ -31,12 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справочникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.судентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.журналToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.журналПризывниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.полученнаяПодготовкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вУСToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вУЗToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.журналToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.журналПризывниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,8 +65,31 @@
             // 
             this.судентыToolStripMenuItem.Name = "судентыToolStripMenuItem";
             this.судентыToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.судентыToolStripMenuItem.Text = "Суденты";
+            this.судентыToolStripMenuItem.Text = "Студенты";
             this.судентыToolStripMenuItem.Click += new System.EventHandler(this.судентыToolStripMenuItem_Click);
+            // 
+            // полученнаяПодготовкаToolStripMenuItem
+            // 
+            this.полученнаяПодготовкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вУСToolStripMenuItem,
+            this.вУЗToolStripMenuItem});
+            this.полученнаяПодготовкаToolStripMenuItem.Name = "полученнаяПодготовкаToolStripMenuItem";
+            this.полученнаяПодготовкаToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.полученнаяПодготовкаToolStripMenuItem.Text = "Полученная подготовка";
+            // 
+            // вУСToolStripMenuItem
+            // 
+            this.вУСToolStripMenuItem.Name = "вУСToolStripMenuItem";
+            this.вУСToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.вУСToolStripMenuItem.Text = "ВУС";
+            this.вУСToolStripMenuItem.Click += new System.EventHandler(this.вУСToolStripMenuItem_Click);
+            // 
+            // вУЗToolStripMenuItem
+            // 
+            this.вУЗToolStripMenuItem.Name = "вУЗToolStripMenuItem";
+            this.вУЗToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.вУЗToolStripMenuItem.Text = "ВУЗ";
+            this.вУЗToolStripMenuItem.Click += new System.EventHandler(this.вУЗToolStripMenuItem_Click);
             // 
             // журналToolStripMenuItem
             // 
@@ -88,29 +111,6 @@
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
-            // 
-            // полученнаяПодготовкаToolStripMenuItem
-            // 
-            this.полученнаяПодготовкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вУСToolStripMenuItem,
-            this.вУЗToolStripMenuItem});
-            this.полученнаяПодготовкаToolStripMenuItem.Name = "полученнаяПодготовкаToolStripMenuItem";
-            this.полученнаяПодготовкаToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.полученнаяПодготовкаToolStripMenuItem.Text = "Полученная подготовка";
-            // 
-            // вУСToolStripMenuItem
-            // 
-            this.вУСToolStripMenuItem.Name = "вУСToolStripMenuItem";
-            this.вУСToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вУСToolStripMenuItem.Text = "ВУС";
-            this.вУСToolStripMenuItem.Click += new System.EventHandler(this.вУСToolStripMenuItem_Click);
-            // 
-            // вУЗToolStripMenuItem
-            // 
-            this.вУЗToolStripMenuItem.Name = "вУЗToolStripMenuItem";
-            this.вУЗToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вУЗToolStripMenuItem.Text = "ВУЗ";
-            this.вУЗToolStripMenuItem.Click += new System.EventHandler(this.вУЗToolStripMenuItem_Click);
             // 
             // menu
             // 
