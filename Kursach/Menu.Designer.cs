@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справочникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.судентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,9 @@
             this.журналToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.журналПризывниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкаПаролейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,19 +112,46 @@
             // 
             // справкаToolStripMenuItem
             // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.справкаToolStripMenuItem1,
+            this.настройкаПаролейToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
+            // 
+            // справкаToolStripMenuItem1
+            // 
+            this.справкаToolStripMenuItem1.Name = "справкаToolStripMenuItem1";
+            this.справкаToolStripMenuItem1.Size = new System.Drawing.Size(183, 22);
+            this.справкаToolStripMenuItem1.Text = "Справка";
+            // 
+            // настройкаПаролейToolStripMenuItem
+            // 
+            this.настройкаПаролейToolStripMenuItem.Name = "настройкаПаролейToolStripMenuItem";
+            this.настройкаПаролейToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.настройкаПаролейToolStripMenuItem.Text = "Настройка паролей";
+            this.настройкаПаролейToolStripMenuItem.Click += new System.EventHandler(this.настройкаПаролейToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 230);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "menu";
             this.Text = "Меню";
+            this.Load += new System.EventHandler(this.menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -136,10 +167,12 @@
         private System.Windows.Forms.ToolStripMenuItem журналToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem журналПризывниковToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem полученнаяПодготовкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вУСToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вУЗToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem настройкаПаролейToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
     }
 }
 

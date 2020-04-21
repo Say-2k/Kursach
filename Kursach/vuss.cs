@@ -85,16 +85,16 @@ namespace Kursach
             string sql;
             if (n == menu.ds.Tables["vus"].Rows.Count)
             {
-                sql = "INSERT INTO vus values(" + textBox1.Text + ", '" + textBox2.Text + "')";
+                sql = "INSERT INTO vus values(" + textBox1.Text + ", '" + textBox2.Text.ToUpper() + "')";
                 menu.Modification_Execute(sql);
                 textBox1.Enabled = false;
-                menu.ds.Tables["vus"].Rows.Add(new object[] { textBox1.Text, textBox2.Text });
+                menu.ds.Tables["vus"].Rows.Add(new object[] { textBox1.Text, textBox2.Text.ToUpper() });
             }
             else
             {
-                sql = "UPDATE vus SET n_vus='" + textBox2.Text + "' WHERE vus_code=" + textBox1.Text;
+                sql = "UPDATE vus SET n_vus='" + textBox2.Text.ToUpper() + "' WHERE vus_code=" + textBox1.Text;
                 menu.Modification_Execute(sql);
-                menu.ds.Tables["vus"].Rows[n].ItemArray = new object[] { textBox1.Text, textBox2.Text };
+                menu.ds.Tables["vus"].Rows[n].ItemArray = new object[] { textBox1.Text, textBox2.Text.ToUpper() };
             }
         }
 

@@ -63,5 +63,25 @@ namespace Kursach
             journal jour = new journal();
             jour.Show();
         }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+            if (authorization.polz != "Администратор")
+            {
+                справочникToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void настройкаПаролейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manage_password password = new manage_password();
+            password.Show();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.Show();
+        }
     }
 }

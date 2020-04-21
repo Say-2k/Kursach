@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorization.Designer.cs">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="journal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="journal.Designer.cs">
       <DependentUpon>journal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_password.Designer.cs">
+      <DependentUpon>manage_password.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
@@ -84,8 +102,17 @@
     <Compile Include="vuzs.Designer.cs">
       <DependentUpon>vuzs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authorization.resx">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="journal.resx">
       <DependentUpon>journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_password.resx">
+      <DependentUpon>manage_password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>

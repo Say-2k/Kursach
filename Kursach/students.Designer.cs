@@ -55,7 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -65,6 +64,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -292,11 +292,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 115);
+            this.label11.Location = new System.Drawing.Point(12, 114);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.Size = new System.Drawing.Size(78, 13);
             this.label11.TabIndex = 65;
-            this.label11.Text = "Дата рождения";
+            this.label11.Text = "Год рождения";
             // 
             // textBox6
             // 
@@ -311,13 +311,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(181, 20);
             this.textBox7.TabIndex = 67;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(104, 111);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(129, 20);
-            this.dateTimePicker2.TabIndex = 68;
             // 
             // groupBox2
             // 
@@ -407,15 +400,22 @@
             this.textBox3.Size = new System.Drawing.Size(58, 20);
             this.textBox3.TabIndex = 71;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(105, 111);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(57, 20);
+            this.textBox4.TabIndex = 72;
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 421);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label11);
@@ -474,7 +474,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
@@ -484,5 +483,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
